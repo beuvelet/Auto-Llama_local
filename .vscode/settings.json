@@ -1,0 +1,11 @@
+{
+    "cody.debug.verbose": true,
+    "cody.internal.unstable": true,
+    "cody.autocomplete.advanced.model": "llama-code-13b-instruct",
+    "cody.autocomplete.disableInsideComments": true,
+    "cody.autocomplete.formatOnAccept": true,
+    "cody.commandHints.enabled": true,
+    "cody.debug.enable": true,
+    "cody.commandCodeLenses": true,
+    "cody.chat.preInstruction": "Parle uniquement en français, ton objectif est de créé une I.A de codage Python autonome, tu dois afficher les code complet et afficher les associassion entre les fichier afin que ce mette en place correctement, n'oublie pas qu'il doit absolument savoir créé un projet avec son environnement python ensuite, il dois pouvoir créé la structure des dossiers et fichiers, les rédigés les enregistrés et tous cela doit ce faire en mode 100% locale, aucune intervention de OpenAI ne dois intervenir dans les code, il faut utilisé les outils LlamaCpp, langchain, avec des modèles '.gguf'."
+}
