@@ -1,7 +1,6 @@
 import os
-import sqlite3
 import langchain
-
+import mysql.connector
 from langchain.llms import LlamaCpp
 from langchain.prompts import PromptTemplate
 
@@ -26,6 +25,8 @@ LOGS_DIR = os.path.join(ROOT_DIR, "logs")
 # Fichiers de configuration
 DATABASE_CONFIG = os.path.join(CONFIG_DIR, "db/db.ini")
 
+db = mysql.connector.connect(DATABASE_CONFIG)
+
 # Création des répertoires s'ils n'existent pas
 for d in [CONFIG_DIR, DATA_DIR, LOGS_DIR]:
     if not os.path.exists(d):
@@ -46,9 +47,3 @@ llm = LlamaCpp(
     verbose=True,
     streaming=True,
 )
-
-
-
-db = sqlite3.connect(DATABASE_CONFIG)
-
-
